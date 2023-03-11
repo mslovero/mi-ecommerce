@@ -1,7 +1,9 @@
 import './App.css';
-import Header from './common/Header';
-//import {BrowserRouter as Router, Switch} from "react-router-dom";
-import { BrowserRouter as Router,  } from "react-router-dom"
+import Header from './common/header/Header'
+// import { BrowserRouter as Router, Switch } from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Pages from './pages/Pages';
+//import { BrowserRouter as Router,  } from "react-router-dom"
 
 
 function App() {
@@ -9,7 +11,9 @@ function App() {
     <>
       <Router>
         <Header />
-        
+        <Routes>
+          <Route path='/' element={ <Pages />} />
+        </Routes> 
       </Router>
     </>
     
@@ -17,3 +21,6 @@ function App() {
 }
 
 export default App;
+<Routes> 
+  <Route path="/home" element={<Pages/>} /> 
+  </Routes>
